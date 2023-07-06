@@ -1,5 +1,6 @@
 ---
 location: Venice
+title: Vinece
 travel-dates: November 10, 2022 - December 1, 2022
 featured-image: ../../static/images/venice.jpg
 ---
