@@ -9,7 +9,7 @@ collections:
  - name: "travel-packages"
    preview: false
    label: "Travel Packages"
-   folder: "content/"
+   folder: "content/travel-packages"
    create: true
    slug: "{{slug}}"
    fields:
