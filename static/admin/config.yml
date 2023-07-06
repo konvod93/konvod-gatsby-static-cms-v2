@@ -13,7 +13,7 @@ collections:
    create: true
    slug: "{{slug}}"
    fields:
-    - { label: "Location Title", name: "title", widget: "string" }
+    - { label: "Location", name: "location", widget: "string" }
     - { label: "Travel Dates", name: "travel-dates", widget: "string" }
     - { label: "Featured Image", name: featured-image, widget: image }
     - { label: "Body", name: "body", widget: "markdown" }

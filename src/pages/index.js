@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => (
             className="card-img-top"
             />
             <Card.Body>
-              <Card.Title>{node.frontmatter.title}</Card.Title>
+              <Card.Title>{node.frontmatter.location}</Card.Title>
               <p>{node.frontmatter.travel_dates}</p>
             </Card.Body>
           </Card>         
