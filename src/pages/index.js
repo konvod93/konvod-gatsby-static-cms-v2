@@ -28,11 +28,11 @@ const IndexPage = ({ data }) => (
           <Card>
           <GatsbyImage
             image={getImage(node.frontmatter.featured_image)}
-            alt={node.frontmatter.location}
+            alt={node.frontmatter.title}
             className="card-img-top"
             />
             <Card.Body>
-              <Card.Title>{node.frontmatter.location}</Card.Title>
+              <Card.Title>{node.frontmatter.title}</Card.Title>
               <p>{node.frontmatter.travel_dates}</p>
             </Card.Body>
           </Card>         
@@ -71,7 +71,7 @@ export const query = graphql`
         id
         frontmatter {
           travel_dates
-          location
+          title
           featured_image {
             childImageSharp {
               gatsbyImageData(aspectRatio: 1.5, width: 600)
