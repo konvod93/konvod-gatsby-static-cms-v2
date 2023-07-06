@@ -1,5 +1,6 @@
 ---
 location: Lima, Peru
+title: Lima Peru
 travel-dates: September 10, 2022 - October 1, 2022
 featured-image: ../../static/images/lima-peru.jpg
 ---
