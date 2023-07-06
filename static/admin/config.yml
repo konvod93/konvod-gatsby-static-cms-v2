@@ -1,0 +1,19 @@
+backend:
+ name: git-gateway
+ branch: main
+
+media_folder: static/images
+public_folder: ../../static/images/
+
+collections: 
+ - name: "travel-packages"
+   preview: false
+   label: "Travel Packages"
+   folder: "content/"
+   create: true
+   slug: "{{slug}}"
+   fields:
+    - { label: "Location", name: "locaton", widget: "string" }
+    - { label: "Travel Dates", name: "travel-dates", widget: "string" }
+    - { label: "Featured Image", name: featured-image, widget: image }
+    - { label: "Body", name: "body", widget: "markdown" }
