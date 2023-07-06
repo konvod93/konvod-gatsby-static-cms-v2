@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => (
       </ul>
      
       
-      <Row>
+      <Row className="g-4">
       {data.travelLocations.edges.map(({ node }) => (                        
         <Col lg={4} xs={6} key={node.id}>
           <Card>
@@ -65,7 +65,7 @@ export const query = graphql`
         }
       }
     }
-    travelLocations: allMarkdownRemark {
+    travelLocations:  allMarkdownRemark(sort: {frontmatter: {title: ASC}}) {
     edges {
       node {
         id
