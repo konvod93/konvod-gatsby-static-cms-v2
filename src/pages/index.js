@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, Script } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -11,6 +11,7 @@ import { Container, Row, Col, Card } from "react-bootstrap"
 const IndexPage = ({ data }) => ( 
  
   <Layout>
+    <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     <Container>
       <h1>Static CMS & Gatsby</h1>
       <ul>
