@@ -37,6 +37,14 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `email-template`,
+        path: `${__dirname}/static`,
+      },
+    },
+    
     `gatsby-plugin-static-cms`,     
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
