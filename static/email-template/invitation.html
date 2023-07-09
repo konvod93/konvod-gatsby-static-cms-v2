@@ -1,2 +1,9 @@
 <h2>Your have been invited</h2>
 
+<p>
+    You have been invited to create a user on {{ .SiteUrl }}. Follow 
+    this link to accept this invite:
+
+</p>
+
+<p> <a href="{{ .SiteUrl }}/admin/#invite_token={{ .Token }}" >Accept the invite</a></p>
