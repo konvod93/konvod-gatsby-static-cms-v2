@@ -14,15 +14,8 @@ const IndexPage = ({ data }) => (
   <Layout>
     <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     <Container>
-      <h1>Static CMS & Gatsby</h1>
-      <ul>
-        {data.fileInformation.edges.map(({ node }) => (
-          <li key={node.id}>
-            {node.base} | {node.prettySize}
-          </li>
-        ))}
-      </ul>
-     
+      <h1 style={{padding: `30px`, textAlign: `center`}}>Blog about travelings with Static CMS & Gatsby</h1>
+          
       
       <Row className="g-4">
       {data.travelLocations.edges.map(({ node }) => ( 

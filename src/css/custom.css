@@ -1,3 +1,16 @@
 .card-body p:last-of-type {
     margin-bottom: 0;
+    background-color: lightgray;
+}
+
+@font-face {
+    font-family: "MagicRetro";   /*Can be any text*/
+    src: local("MagicRetro"),
+      url("../fonts/MagicRetro.ttf") format("truetype");
+  }
+
+h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color:darkgrey;
 }
