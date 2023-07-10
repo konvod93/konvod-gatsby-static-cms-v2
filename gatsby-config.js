@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `md`,
+        name: `posts`,
         path: `${__dirname}/content`,
       },
     },
@@ -49,6 +49,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-slug`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

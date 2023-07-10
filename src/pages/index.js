@@ -4,6 +4,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { AiOutlineDoubleRight } from "@react-icons/all-files/ai/AiOutlineDoubleRight";
 
 import { Container, Row, Col, Card } from "react-bootstrap"
 
@@ -24,7 +25,8 @@ const IndexPage = ({ data }) => (
      
       
       <Row className="g-4">
-      {data.travelLocations.edges.map(({ node }) => (                        
+      {data.travelLocations.edges.map(({ node }) => ( 
+                               
         <Col lg={4} xs={6} key={node.id}>
           <Card>
           <GatsbyImage
@@ -35,6 +37,7 @@ const IndexPage = ({ data }) => (
             <Card.Body>
               <Card.Title>{node.frontmatter.title}</Card.Title>
               <p>{node.frontmatter.travel_dates}</p>
+              <Link to={`/${node.frontmatter.category}/${node.frontmatter.url}`} >Read <AiOutlineDoubleRight /></Link>
             </Card.Body>
           </Card>         
         </Col>
@@ -66,21 +69,23 @@ export const query = graphql`
         }
       }
     }
-    travelLocations:  allMarkdownRemark(sort: {frontmatter: {title: ASC}}) {
-    edges {
-      node {
-        id
-        frontmatter {
-          travel_dates
-          title
-          featured_image {
-            childImageSharp {
-              gatsbyImageData(aspectRatio: 1.5, width: 600)
+    travelLocations: allMarkdownRemark(sort: { frontmatter: { title: ASC } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            url
+            travel_dates
+            title
+            featured_image {
+              childImageSharp {
+                gatsbyImageData(aspectRatio: 1.5, width: 600)
+              }
             }
+            category
           }
         }
       }
     }
-  }
   }
 `

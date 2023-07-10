@@ -1,5 +1,7 @@
 ---
 title: Las Vegas
+category: north-america
+url: las-vegas
 travel-dates: August 10, 2022 - September 1, 2022
 featured-image: ../../static/images/las-vegas.jpg
 ---
