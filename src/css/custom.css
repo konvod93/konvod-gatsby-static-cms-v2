@@ -1,6 +1,9 @@
+body {background-image: url(../images/4853433.jpg);}
+
 .card-body p:last-of-type {
     margin-bottom: 0;
     background-color: lightgray;
+    background-size: cover;
 }
 
 @font-face {
@@ -13,4 +16,10 @@ h1 {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     color:darkgrey;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }

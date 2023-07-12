@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
+import { Container } from "react-bootstrap"
 
 const SinglePost = ({ data }) => {
   const { html } = data.markdownRemark
@@ -10,6 +11,7 @@ const SinglePost = ({ data }) => {
   const img = getImage(featured_image)
   return (
     <Layout>
+      <Container>
       <div>
         <h1>{title}</h1>
         <div>
@@ -17,6 +19,7 @@ const SinglePost = ({ data }) => {
         </div>
         <div dangerouslySetInnerHTML={{__html: html}}/>
       </div>
+      </Container>
     </Layout>
   )
 }
