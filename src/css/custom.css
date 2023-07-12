@@ -9,22 +9,55 @@ body {
     background-size: cover;
 }
 
+.card-body {
+    background-color: rgb(255, 255, 255);
+    background-size: cover;    
+    
+}
+
 .card-body p:last-of-type {
-    margin-bottom: 0;
-    background-color: lightgray;
-    background-size: cover;
+    margin-bottom: 0;   
 }
 
 @font-face {
-    font-family: "MagicRetro";   /*Can be any text*/
-    src: local("MagicRetro"),
-      url("../fonts/MagicRetro.ttf") format("truetype");
+    font-family: "Roboto";   /*Can be any text*/
+    src: local("Roboto-Medium"),
+      url("../fonts/Roboto-Medium.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "Roboto";   /*Can be any text*/
+    src: local("Roboto-Bold"),
+      url("../fonts/Roboto-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Roboto";   /*Can be any text*/
+    src: local("Roboto-Light"),
+      url("../fonts/Roboto-Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Roboto";   /*Can be any text*/
+    src: local("Roboto-Regular"),
+      url("../fonts/Roboto-Regular.ttf") format("truetype");
+  }  
 
 h1 {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     color:darkgrey;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    color: #3d3d3d   
 }
 
 header {
@@ -34,3 +67,6 @@ header {
     opacity: .7
 }
 
+/* .col-lg-4 {
+    opacity: 0.8;
+} */
