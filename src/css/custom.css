@@ -1,4 +1,13 @@
-body {background-image: url(../images/4853433.jpg);}
+body {
+    background-image: url(../images/4853433.jpg);
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .card-body p:last-of-type {
     margin-bottom: 0;
@@ -22,4 +31,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
+    opacity: .7
 }
+
