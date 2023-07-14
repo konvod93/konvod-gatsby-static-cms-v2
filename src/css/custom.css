@@ -19,28 +19,40 @@ body {
     margin-bottom: 0;   
 }
 
+
+
 @font-face {
     font-family: "Roboto";   /*Can be any text*/
-    src: local("Roboto-Medium"),
+    src: local("Roboto"),
       url("../fonts/Roboto-Medium.ttf") format("truetype");
+    font-weight: 500;
   }
 
   @font-face {
     font-family: "Roboto";   /*Can be any text*/
-    src: local("Roboto-Bold"),
+    src: local("Roboto"),
       url("../fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
   }
 
   @font-face {
     font-family: "Roboto";   /*Can be any text*/
-    src: local("Roboto-Light"),
+    src: local("Roboto"),
       url("../fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: 200;
   }
 
   @font-face {
     font-family: "Roboto";   /*Can be any text*/
-    src: local("Roboto-Regular"),
+    src: local("Roboto"),
       url("../fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }  
+  @font-face {
+    font-family: "Roboto";   /*Can be any text*/
+    src: local("Roboto"),
+      url("../fonts/Roboto-Italic.ttf") format("truetype");
+      font-style: italic;
   }  
 
 h1 {
@@ -55,7 +67,8 @@ h2 {
 }
 
 p {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto';
+    
     font-weight: 400;
     color: #3d3d3d   
 }

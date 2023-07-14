@@ -30,6 +30,7 @@ const IndexPage = ({ data }) => (
             <Card.Body>
               <Card.Title>{node.frontmatter.title}</Card.Title>
               <p>{node.frontmatter.travel_dates}</p>
+              <p style={{ fontFamily: 'Roboto', fontWeight: '500' }}>Category: <span style={{fontFamily: 'Roboto', fontStyle: 'italic'}}>{node.frontmatter.category}</span></p>
               <Link to={`/${node.frontmatter.category}/${node.frontmatter.url}`} >Read <AiOutlineDoubleRight /></Link>
             </Card.Body>
           </Card>         

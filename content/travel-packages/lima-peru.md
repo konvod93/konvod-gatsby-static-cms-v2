@@ -1,6 +1,6 @@
 ---
 title: Lima, Peru
-category: south-america
+category: South-America
 url: lima-peru
 travel-dates: September 10, 2022 - October 1, 2022
 featured-image: ../../static/images/lima-peru.jpg
