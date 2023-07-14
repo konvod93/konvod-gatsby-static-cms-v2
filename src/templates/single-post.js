@@ -24,7 +24,7 @@ const SinglePost = ({ data }) => {
   )
 }
 
-export const Head = ({title}) => <Seo title={title} />
+export const Head = ({data}) => <Seo title={data.markdownRemark.frontmatter.title} />
 
 export default SinglePost
 
