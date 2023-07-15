@@ -9,6 +9,7 @@ body {
     background-size: cover;
 }
 
+
 .card-body {
     background-color: rgb(255, 255, 255);
     background-size: cover;    
@@ -19,6 +20,13 @@ body {
     margin-bottom: 0;   
 }
 
+.card {
+  box-shadow: 1px 1px 3px black; 
+}
+
+.card:hover {
+  box-shadow: 2px 2px 8px black; 
+}
 
 
 @font-face {
