@@ -20,16 +20,7 @@ const Header = ({ siteTitle }) => (
             >
               Home
             </Nav.Link>           
-            <Nav.Link as={Link}
-              to="/categories"
-              // style={{
-              //   fontWeight: `bold`,
-              //   color: `white`,
-              //   textDecoration: `none`,
-              // }}
-            >
-              Categories
-            </Nav.Link>            
+                      
           </Nav>        
       </Container>
     </Navbar>

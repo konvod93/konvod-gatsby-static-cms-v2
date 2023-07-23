@@ -28,15 +28,20 @@ export const Head = ({data}) => <Seo title={data.markdownRemark.frontmatter.titl
 
 export default SinglePost
 
-export const query = graphql`
-query PostQuery($url: String) {
-  markdownRemark(frontmatter: {url: {eq: $url}}) {
+export const pageQuery = graphql`
+query PostQuery($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    id
     html
+    fields {
+      slug
+    }
     frontmatter {
-      title      
+      title
+      travel_dates
       featured_image {
         childImageSharp {
-          gatsbyImageData(width: 600)
+          gatsbyImageData(aspectRatio: 1.5, width: 600)
         }
       }
     }

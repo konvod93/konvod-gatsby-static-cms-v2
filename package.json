@@ -11,8 +11,8 @@
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-react-helmet": "^6.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
-    "gatsby-plugin-slug": "^2.0.0",
     "gatsby-plugin-static-cms": "^2.0.2",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-remark": "^6.11.0",
@@ -20,6 +20,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.10.1"
   },
   "devDependencies": {
