@@ -8,6 +8,7 @@ import { AiOutlineDoubleRight } from "@react-icons/all-files/ai/AiOutlineDoubleR
 
 import { Container, Row, Col, Card } from "react-bootstrap"
 import CardSinglePost from "../components/cardsinglepost"
+import PostList from "../components/postlist"
 
 
 const IndexPage = ({ data }) => {
@@ -22,15 +23,8 @@ const IndexPage = ({ data }) => {
           Blog about travelings with Static CMS & Gatsby
         </h1>
 
-        <Row className="g-4">
-          {posts.map(post => {
-            const title = post.frontmatter.title || post.slug
-            return (            
-            <Col lg={4} xs={12} sm={6} key={post.id}>
-              <CardSinglePost { ...post } />
-            </Col>
-            )
-          })}
+        <Row className="g-4">          
+          <PostList posts={posts} />
         </Row>
       </Container>
     </Layout>
