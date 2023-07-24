@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import { AiOutlineDoubleRight } from "@react-icons/all-files/ai/AiOutlineDoubleRight";
 
 import { Container, Row, Col, Card } from "react-bootstrap"
+import CardSinglePost from "../components/cardsinglepost"
 
 
 const IndexPage = ({ data }) => {
@@ -26,21 +27,7 @@ const IndexPage = ({ data }) => {
             const title = post.frontmatter.title || post.slug
             return (            
             <Col lg={4} xs={12} sm={6} key={post.id}>
-              <Card>
-                <GatsbyImage
-            image={getImage(post.frontmatter.featured_image)}
-            alt={post.frontmatter.title}
-            className="card-img-top"
-            />
-                <Card.Body>
-                  <Card.Title>{post.frontmatter.title}</Card.Title>
-                  <p style={{ fontFamily: `Roboto`, fontStyle: `italic` }}>{post.frontmatter.travel_dates}</p>
-                  <p style={{ fontFamily: `Roboto`, fontWeight: `500` }}>Category: <span style={{fontFamily: `Roboto`, fontStyle: `italic`}}>{post.frontmatter.category}</span></p>
-                  <Link to={post.fields.slug}>
-                    Read <AiOutlineDoubleRight />
-                  </Link>
-                </Card.Body>
-              </Card>
+              <CardSinglePost { ...post } />
             </Col>
             )
           })}
