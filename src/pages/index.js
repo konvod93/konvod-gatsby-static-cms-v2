@@ -3,11 +3,11 @@ import { graphql, Script } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Container, Row } from "react-bootstrap"
-import PostList from "../components/postlist"
+import PostList from "../components/postlist.js"
 
 
 const IndexPage = ({ data }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  // const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
   return (
