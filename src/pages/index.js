@@ -1,13 +1,8 @@
 import * as React from "react"
-import { Link, graphql, Script } from "gatsby"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
-
+import { graphql, Script } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { AiOutlineDoubleRight } from "@react-icons/all-files/ai/AiOutlineDoubleRight";
-
 import { Container, Row, Col, Card } from "react-bootstrap"
-import CardSinglePost from "../components/cardsinglepost"
 import PostList from "../components/postlist"
 
 
