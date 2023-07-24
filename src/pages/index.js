@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql, Script } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Container, Row, Col, Card } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 import PostList from "../components/postlist"
 
 
