@@ -3,7 +3,7 @@ import { graphql, Script } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Container, Row } from "react-bootstrap"
-import PostList from "../components/postlist.js"
+import PostList from '../components/PostList'
 
 
 const IndexPage = ({ data }) => {

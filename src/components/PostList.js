@@ -1,6 +1,6 @@
 import React from "react";
 import { Col } from "react-bootstrap";
-import CardSinglePost from "./cardsinglepost.js";
+import CardSinglePost from './CardSinglePost'
 
 const PostList = ({ posts }) => {
   return posts.map(post => {
