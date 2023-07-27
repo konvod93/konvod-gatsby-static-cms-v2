@@ -44,12 +44,12 @@ module.exports = {
         path: `${__dirname}/static`,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-categories",
-    //   options: {
-    //     templatePath: `${__dirname}/src/templates/category.js`,
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-categories",
+      options: {
+        templatePath: `${__dirname}/src/templates/category.js`,
+      },
+    },
     
     `gatsby-plugin-static-cms`,     
     `gatsby-transformer-sharp`,

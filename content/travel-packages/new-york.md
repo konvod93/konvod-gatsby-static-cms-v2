@@ -2,7 +2,7 @@
 title: "New York "
 travel-dates: December 10, 2022- January 1, 2023
 url: new-york
-category: North-America
+category: north-america
 featured-image: ../../static/images/new-york.jpg
 ---
 T﻿his Is Information about New York. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec dolor ut metus facilisis dapibus nec ac orci. Nulla ullamcorper auctor porttitor. Fusce suscipit a libero quis posuere. In urna justo, bibendum hendrerit maximus quis, sodales in sapien. Nunc ut vehicula sem. Vestibulum mattis orci in justo scelerisque, eu malesuada ex fringilla. Duis congue, lectus eget fringilla vestibulum, turpis nulla auctor justo, ut euismod diam velit ultrices magna. Nullam id purus bibendum, porttitor metus ut, suscipit magna. Phasellus posuere ipsum quis magna interdum, at lacinia dui molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et lacus viverra ipsum facilisis venenatis a ut erat. Fusce et sapien nisl. Nulla a dolor lacinia, rhoncus dolor nec, eleifend augue. Vivamus sit amet erat at ante facilisis imperdiet.

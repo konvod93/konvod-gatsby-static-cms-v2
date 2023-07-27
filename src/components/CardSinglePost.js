@@ -15,7 +15,7 @@ const CardSinglePost = ({ frontmatter, fields }) => {
                 <Card.Body>
                   <Card.Title>{frontmatter.title}</Card.Title>
                   <p style={{ fontFamily: `Roboto`, fontStyle: `italic` }}>{frontmatter.travel_dates}</p>
-                  <p style={{ fontFamily: `Roboto`, fontWeight: `500` }}>Category: <span style={{fontFamily: `Roboto`, fontStyle: `italic`}}>{frontmatter.category}</span></p>
+                  <p style={{ fontFamily: `Roboto`, fontWeight: `500` }}>Category: <Link to={`/category/${frontmatter.category}`} style={{fontFamily: `Roboto`, fontStyle: `italic`}}>{frontmatter.category}</Link></p>
                   <Link to={fields.slug}>
                     Read <AiOutlineDoubleRight />
                   </Link>

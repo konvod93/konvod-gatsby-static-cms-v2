@@ -3,7 +3,8 @@ import { graphql, Script } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Container, Row } from "react-bootstrap"
-import PostList from '../components/PostList'
+import PostsList from "../components/PostsList"
+
 
 
 const IndexPage = ({ data }) => {
@@ -19,7 +20,7 @@ const IndexPage = ({ data }) => {
         </h1>
 
         <Row className="g-4">          
-          <PostList posts={posts} />
+          <PostsList posts={posts} />
         </Row>
       </Container>
     </Layout>
@@ -55,7 +56,7 @@ export const pageQuery = graphql`
         travel_dates
         featured_image {
           childImageSharp {
-            gatsbyImageData(width: 600, aspectRatio: 1.5)
+            gatsbyImageData(width: 600, aspectRatio: 1.5, placeholder: BLURRED)
           }
         }
       }

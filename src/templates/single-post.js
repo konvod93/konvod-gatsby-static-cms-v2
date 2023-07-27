@@ -41,7 +41,7 @@ query PostQuery($id: String!) {
       travel_dates
       featured_image {
         childImageSharp {
-          gatsbyImageData(aspectRatio: 1.5, width: 600)
+          gatsbyImageData(aspectRatio: 1.5, width: 600, placeholder: BLURRED)
         }
       }
     }
