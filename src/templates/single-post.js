@@ -17,7 +17,7 @@ const SinglePost = ({ data }) => {
         <div>
           <GatsbyImage image={img} alt={title} />
         </div>
-        <div dangerouslySetInnerHTML={{__html: html}}/>
+        <div dangerouslySetInnerHTML={{__html: html}} className="postbox"/>
       </div>
       </Container>
     </Layout>

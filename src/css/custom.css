@@ -28,6 +28,17 @@ body {
   box-shadow: 2px 2px 8px black; 
 }
 
+.postbox {
+  background-color: rgba(240, 248, 255, 0.7);
+  margin: 20px 20px 20px 0;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px black;
+}
+
+.postbox:hover {
+  box-shadow: 2px 2px 8px black; 
+}
 
 @font-face {
     font-family: "Roboto";   /*Can be any text*/
