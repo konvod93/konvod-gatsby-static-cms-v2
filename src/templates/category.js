@@ -20,7 +20,7 @@ const CategoryTemplate = ({ data, pageContext }) => {
   )
 }
 
-// export const Head = ({category}) => <Seo title={{category}} />
+// export const Head = ({category}) => <Seo title={category} />
 
 export default CategoryTemplate
 

@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
           Blog about travelings with Static CMS & Gatsby
         </h1>
 
-        <Row className="g-4">          
+        <Row className="g-4" style={{marginBottom: `50px`}} >          
           <PostsList posts={posts} />
         </Row>
       </Container>

@@ -4,11 +4,15 @@ import Seo from "../components/seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import { Container } from "react-bootstrap"
+import { Link } from "gatsby"
+import TagsList from "../components/TagsList"
 
 const SinglePost = ({ data }) => {
   const { html } = data.markdownRemark
-  const { title, featured_image } = data.markdownRemark.frontmatter
+  const { title, category, featured_image } = data.markdownRemark.frontmatter
+  const { tags } = data.markdownRemark.fields
   const img = getImage(featured_image)
+  
   return (
     <Layout>
       <Container>
@@ -17,7 +21,16 @@ const SinglePost = ({ data }) => {
         <div>
           <GatsbyImage image={img} alt={title} />
         </div>
+        <div style={{marginTop: "20px", fontStyle: "italic"}}>
+          <p>{data.markdownRemark.frontmatter.travel_dates}</p>          
+        </div>
+        <div>
+          <p style={{fontStyle: "italic"}}>Category: <Link to={`/category/${category}`}>{category}</Link></p>
+        </div>
         <div dangerouslySetInnerHTML={{__html: html}} className="postbox"/>
+        <div style={{marginBottom: `50px`}}>
+          <TagsList tags={tags} />
+        </div>
       </div>
       </Container>
     </Layout>
@@ -35,9 +48,11 @@ query PostQuery($id: String!) {
     html
     fields {
       slug
+      tags
     }
     frontmatter {
       title
+      category
       travel_dates
       featured_image {
         childImageSharp {

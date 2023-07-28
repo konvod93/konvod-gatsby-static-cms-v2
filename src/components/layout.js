@@ -17,6 +17,7 @@ import '../fonts/Roboto-Light.ttf';
 import '../fonts/Roboto-Medium.ttf';
 import '../fonts/Roboto-Regular.ttf';
 
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -34,10 +35,20 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <footer
         style={{
+          display: `flex`,
+          boxSizing: `border-box`,
+          width: `100%`,
           marginTop: `var(--space-5)`,
           fontSize: `var(--font-sm)`,
+          backgroundColor: `black`,
+          color: `white`,
+          position: `fixed`,
+          bottom: `0`,
+          opacity: `0.9`,
+          padding: `10px`,
         }}
       >
+        
         © {new Date().getFullYear()} &middot; Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
