@@ -7,10 +7,10 @@ import Seo from "../components/seo"
 import PostsList from "../components/PostsList"
 
 const CategoryTemplate = ({ data, pageContext }) => {
-  const { category } = pageContext
+  const { tag } = pageContext
   return (
     <Layout>
-      <Seo title={category}/>
+      <Seo title={tag}/>
       <Container className="m-4">      
         <Row className="g-4">
           <PostsList posts={data.allMarkdownRemark.nodes} />
@@ -26,13 +26,13 @@ export default CategoryTemplate
 
 
 export const pageQuery = graphql`
-query CategoryPage($category: String) {
+query TagPage($tag: String) {
   site {
       siteMetadata {
         title
       }
     }
-  allMarkdownRemark(filter: {frontmatter: {category: {eq: $category}}}) {
+  allMarkdownRemark(filter: {fields: {tags: {in: [$tag]}}}) {
     nodes {
       fields {
         slug

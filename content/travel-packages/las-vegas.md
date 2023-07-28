@@ -1,6 +1,12 @@
 ---
 title: Las Vegas
 category: north-america
+tags:
+ - north-america
+ - las-vegas
+ - casino
+ - nevada
+ - mojave
 url: las-vegas
 travel-dates: August 10, 2022 - September 1, 2022
 featured-image: ../../static/images/las-vegas.jpg

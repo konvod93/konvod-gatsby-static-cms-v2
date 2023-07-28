@@ -50,7 +50,12 @@ module.exports = {
         templatePath: `${__dirname}/src/templates/category.js`,
       },
     },
-    
+    {
+      resolve: "gatsby-plugin-tags",
+      options: {
+        templatePath: `${__dirname}/src/templates/tag.js`,
+      },
+    },        
     `gatsby-plugin-static-cms`,     
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

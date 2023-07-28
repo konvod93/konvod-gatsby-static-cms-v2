@@ -49,9 +49,10 @@ export const pageQuery = graphql`
       id      
       fields {
         slug
+        tags
       }
       frontmatter {
-        category
+        category        
         title
         travel_dates
         featured_image {

@@ -1,6 +1,13 @@
 ---
 title: Lima, Peru
 category: south-america
+tags:
+- south-america
+- peru
+- andes
+- costa
+- indians
+- latin-america
 url: lima-peru
 travel-dates: September 10, 2022 - October 1, 2022
 featured-image: ../../static/images/lima-peru.jpg

@@ -7846,6 +7846,14 @@ gatsby-plugin-static-cms@^2.0.2:
     mini-css-extract-plugin "2.7.3"
     netlify-identity-widget "1.9.2"
 
+gatsby-plugin-tags@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-tags/-/gatsby-plugin-tags-2.3.7.tgz#1dc55b9a71c9a59a444897e2ccf33e3b72019fd2"
+  integrity sha512-L/M0938G90FBPgMrMDaxI1phNxyu10OLQU94Tfoj7RL4h9USbLxY2yAHjfW4bPRN+XsSMc5nHxVKVyj7JHd00A==
+  dependencies:
+    lodash "^4.17.15"
+    slug "^1.1.0"
+
 gatsby-plugin-typescript@^5.11.0:
   version "5.11.0"
   resolved "https://registry.npmjs.org/gatsby-plugin-typescript/-/gatsby-plugin-typescript-5.11.0.tgz"

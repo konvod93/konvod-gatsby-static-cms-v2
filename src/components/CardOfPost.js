@@ -3,9 +3,16 @@ import { Link } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { AiOutlineDoubleRight } from "@react-icons/all-files/ai/AiOutlineDoubleRight";
 import { Card } from "react-bootstrap"
+import TagsList from "./TagsList";
 
-const CardSinglePost = ({ frontmatter, fields }) => {
-    return (
+
+
+
+const CardOfPost = ({ frontmatter, fields }) => {
+  
+  const tags = fields.tags
+  
+      return (
         <Card>
                 <GatsbyImage
             image={getImage(frontmatter.featured_image)}
@@ -20,8 +27,11 @@ const CardSinglePost = ({ frontmatter, fields }) => {
                     Read <AiOutlineDoubleRight />
                   </Link>
                 </Card.Body>
+                <Card.Footer>                  
+                  <TagsList tags={tags} />
+                </Card.Footer>
               </Card>
     )
 }
 
-export default CardSinglePost
+export default CardOfPost

@@ -1,6 +1,12 @@
 ---
 title: Venice
 category: italy
+tags:
+ - italy
+ - vinece
+ - gondola
+ - carnevele
+ - mediterranean-countries
 url: vinece
 travel-dates: November 10, 2022 - December 1, 2022
 featured-image: ../../static/images/venice.jpg
