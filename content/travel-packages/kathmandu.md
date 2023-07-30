@@ -8,6 +8,7 @@ tags:
   - buddhism
   - hinduism
   - vajrayana
+  - boudhanath
 featured-image: ../../static/images/kathmandu.jpg
 ---
 ## It is post about Kathmandu
