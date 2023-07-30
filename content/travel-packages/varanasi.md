@@ -1,6 +1,6 @@
 ---
 title: Varanasi
-travel-dates: 10 March - 1 April 2023
+travel-dates: March 10, 2023 -  April 1, 2023
 url: varanasi
 category: india
 tags:
