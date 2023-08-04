@@ -19,7 +19,8 @@ const Header = ({ siteTitle }) => (
               // }}
             >
               Home
-            </Nav.Link>           
+            </Nav.Link>
+            <Nav.Link as={Link} to="/about">About</Nav.Link>          
                       
           </Nav>        
       </Container>

@@ -44,7 +44,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(filter: {fields: {slug: {glob: "/travel-packages/*/"}}}) {
     nodes {
       id      
       fields {
