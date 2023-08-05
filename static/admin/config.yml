@@ -20,3 +20,14 @@ collections:
     - { label: "Tags", name: "tags", widget: "list" }
     - { label: "Featured Image", name: featured-image, widget: image }
     - { label: "Body", name: "body", widget: "markdown" }
+ - name: "pages"
+   preview: false
+   label: "Pages"
+   folder: "content/pages"
+   create: true
+   slug: "{{alug}}"
+   fields:
+   - { label: "Page Title", name: "title", widget: "string" }
+   - { label: "Slug", name: "slug", widget: "string" }
+   - { label: "Featured Image", name: featured image, widget: image } 
+   - { label: "Body", name: "body", widget: "marldown" }
