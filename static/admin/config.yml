@@ -25,9 +25,9 @@ collections:
    label: "Pages"
    folder: "content/pages"
    create: true
-   slug: "{{alug}}"
+   slug: "{{slug}}"
    fields:
    - { label: "Page Title", name: "title", widget: "string" }
    - { label: "Slug", name: "slug", widget: "string" }
-   - { label: "Featured Image", name: featured image, widget: image } 
-   - { label: "Body", name: "body", widget: "marldown" }
+   - { label: "Featured Image", name: featured-image, widget: image } 
+   - { label: "Body", name: "body", widget: "markdown" }
