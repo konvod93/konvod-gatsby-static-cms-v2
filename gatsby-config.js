@@ -62,7 +62,13 @@ module.exports = {
       options: {
         templatePath: `${__dirname}/src/templates/tag.js`,
       },
-    },        
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `konvodsite`
+      }
+  },           
     `gatsby-plugin-static-cms`,     
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
