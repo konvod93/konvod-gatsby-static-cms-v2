@@ -16,6 +16,7 @@ import '../fonts/Roboto-Italic.ttf';
 import '../fonts/Roboto-Light.ttf';
 import '../fonts/Roboto-Medium.ttf';
 import '../fonts/Roboto-Regular.ttf';
+import { SocialIcon } from "react-social-icons";
 
 
 const Layout = ({ children }) => {
@@ -42,20 +43,36 @@ const Layout = ({ children }) => {
           fontSize: `var(--font-sm)`,
           backgroundColor: `black`,
           color: `white`,
-          position: `fixed`,
-          bottom: `0`,
+          position: `sticky`,          
+          bottom: `-10px`,
           opacity: `0.9`,
-          padding: `10px`,
+          paddingTop: `10px`,
+          paddingBottom: `10px`,
+          justifyContent: `space-between`,
+          paddingLeft: `50px`,
+          paddingRight: `50px`
         }}
       >
-        
+        <span>
         © {new Date().getFullYear()} &middot; Built with
         {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <a href="https://www.gatsbyjs.com">Gatsby</a>       
         {` `}
+        </span>
+        <span>
         Background image from
         {` `}
         <a href="https://ru.freepik.com/free-vector/white-abstract-background_11852424.htm#query=%D1%84%D0%BE%D0%BD%D0%B4%D0%BB%D1%8F%D1%81%D0%B0%D0%B9%D1%82%D0%B0&position=5&from_view=keyword&track=ais#position=5&query=%D1%84%D0%BE%D0%BD%D0%B4%D0%BB%D1%8F%D1%81%D0%B0%D0%B9%D1%82%D0%B0?log-in=google">Freepik</a>
+        </span>
+        <SocialIcon url="#" network="facebook"/>
+        <SocialIcon url="#" network="telegram"/>
+        <SocialIcon url="#" network="instagram"/>
+        <SocialIcon url="#" network="twitter"/>
+        <SocialIcon url="#" network="linkedin"/>
+        <SocialIcon url="#" network="pinterest"/>
+        <SocialIcon url="#" network="github"/>
+        <SocialIcon url="#" network="gitlab"/>
+        <SocialIcon url="#" network="youtube"/>
       </footer>
     </>
   )
