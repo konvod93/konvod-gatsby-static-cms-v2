@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PostsList from "../components/PostsList"
 
-const CategoryTemplate = ({ data, pageContext }) => {
+const TagsTemplate = ({ data, pageContext }) => {
   const { tag } = pageContext
   return (
     <Layout>
@@ -22,7 +22,7 @@ const CategoryTemplate = ({ data, pageContext }) => {
 
 // export const Head = ({category}) => <Seo title={{category}} />
 
-export default CategoryTemplate
+export default TagsTemplate
 
 
 export const pageQuery = graphql`
@@ -32,7 +32,10 @@ query TagPage($tag: String) {
         title
       }
     }
-  allMarkdownRemark(filter: {fields: {tags: {in: [$tag]}}}) {
+  allMarkdownRemark(
+    filter: {fields: {tags: {in: [$tag]}}}
+    sort: {frontmatter: {date: DESC}}
+    ) {
     nodes {
       fields {
         slug
@@ -41,6 +44,7 @@ query TagPage($tag: String) {
       frontmatter {
         title
         travel_dates
+        date(formatString: "MMM DD, YYYY ")
         featured_image {
           childImageSharp {
             gatsbyImageData(aspectRatio: 1.5, width: 600, formats: [AUTO, AVIF], placeholder: BLURRED)

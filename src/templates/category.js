@@ -32,7 +32,10 @@ query CategoryPage($category: String) {
         title
       }
     }
-  allMarkdownRemark(filter: {frontmatter: {category: {eq: $category}}}) {
+  allMarkdownRemark(
+    filter: {frontmatter: {category: {eq: $category}}}
+    sort: {frontmatter: {date: DESC}}
+    ) {
     nodes {
       fields {
         slug
@@ -41,6 +44,7 @@ query CategoryPage($category: String) {
       frontmatter {
         title
         travel_dates
+        date(formatString: "MMM DD, YYYY ")
         featured_image {
           childImageSharp {
             gatsbyImageData(aspectRatio: 1.5, width: 600, formats: [AUTO, AVIF], placeholder: BLURRED)
