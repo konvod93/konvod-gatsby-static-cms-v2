@@ -1,6 +1,7 @@
 ---
 title: Haiti
 travel-dates: 10 Febuary 2023 - 1 March 2023
+date: "2023-03-15"
 url: haiti
 category: mezo-america
 tags: 

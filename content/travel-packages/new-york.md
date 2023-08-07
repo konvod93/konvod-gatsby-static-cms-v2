@@ -1,6 +1,7 @@
 ---
 title: "New York "
 travel-dates: December 10, 2022- January 1, 2023
+date: "2023-01-15"
 url: new-york
 category: north-america
 tags: 

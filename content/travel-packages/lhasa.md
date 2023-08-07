@@ -1,6 +1,7 @@
 ---
 title: Lhasa
 travel-dates: May 10, 2023 - June 1, 2023
+date: "2023-06-15"
 url: lhasa
 category: tibet
 tags:

@@ -12,7 +12,7 @@ import { Disqus } from "gatsby-plugin-disqus"
 
 const SinglePost = ({ data }) => {
   const { html } = data.markdownRemark
-  const { title, category, featured_image } = data.markdownRemark.frontmatter
+  const { title, category, featured_image, date } = data.markdownRemark.frontmatter
   const { tags, slug } = data.markdownRemark.fields
   const img = getImage(featured_image)
   
@@ -34,6 +34,7 @@ const SinglePost = ({ data }) => {
             </p>
           </div>
           <div dangerouslySetInnerHTML={{ __html: html }} className="postbox" />
+          <div style={{ margin: "20px", fontStyle: "italic" }}>Published {date}</div>
           <div style={{ marginBottom: `50px` }}>
             <TagsList tags={tags} />
           </div>
@@ -41,7 +42,7 @@ const SinglePost = ({ data }) => {
       </Container>
       <Disqus 
       identifier={data.markdownRemark.id}
-      title={data.markdownRemark.title}
+      title={title}
       url={slug}
     />
       
@@ -66,6 +67,7 @@ query PostQuery($id: String!) {
       title
       category
       travel_dates
+      date(formatString: "MMM DD, YYYY ")
       featured_image {
         childImageSharp {
           gatsbyImageData(aspectRatio: 1.5, width: 600, placeholder: BLURRED)

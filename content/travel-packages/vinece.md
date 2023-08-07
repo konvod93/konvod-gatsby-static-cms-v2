@@ -9,6 +9,7 @@ tags:
  - mediterranean-countries
 url: vinece
 travel-dates: November 10, 2022 - December 1, 2022
+date: "2022-12-15"
 featured-image: ../../static/images/venice.jpg
 ---
 

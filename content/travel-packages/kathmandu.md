@@ -1,6 +1,7 @@
 ---
 title: Kathmandu
-travel-dates: "April 10, 1023 - May 1, 2023 "
+travel-dates: "April 10, 2023 - May 1, 2023 "
+date: "2023-05-15"
 url: kathmandu
 category: nepal
 tags:

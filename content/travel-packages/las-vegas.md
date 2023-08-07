@@ -9,6 +9,7 @@ tags:
  - mojave
 url: las-vegas
 travel-dates: August 10, 2022 - September 1, 2022
+date: "2022-09-15"
 featured-image: ../../static/images/las-vegas.jpg
 ---
 
