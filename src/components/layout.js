@@ -30,6 +30,18 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const socials = [
+    "facebook",
+    "telegram",
+    "instagram",
+    "twitter",
+    "linkedin",
+    "pinterest",
+    "github",
+    "gitlab", 
+    "youtube",
+  ]
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
@@ -54,33 +66,13 @@ const Layout = ({ children }) => {
             justifyContent: `center`,
           }}
         >
-          <div>
-            <SocialIcon url="#" network="facebook" style={{ height: 20, width: 20, margin: 5}}/>
-          </div>
-          <div>
-            <SocialIcon url="#" network="telegram" style={{ height: 20, width: 20, margin: 5}}/>
-          </div>
-          <div>
-            <SocialIcon url="#" network="instagram" style={{ height: 20, width: 20, margin: 5}}/>
-          </div>
-          <div>
-            <SocialIcon url="#" network="twitter" style={{ height: 20, width: 20, margin: 5}}/>
-          </div>
-          <div>
-            <SocialIcon url="#" network="linkedin" style={{ height: 20, width: 20, margin: 5}}/>
-          </div>
-          <div>
-            <SocialIcon url="#" network="pinterest" style={{ height: 20, width: 20, margin: 5}}/>
-          </div>
-          <div>
-            <SocialIcon url="#" network="github" style={{ height: 20, width: 20, margin: 5}}/>
-          </div>
-          <div>
-            <SocialIcon url="#" network="gitlab" style={{ height: 20, width: 20, margin: 5}}/>
-          </div>
-          <div>
-            <SocialIcon url="#" network="youtube" style={{ height: 20, width: 20, margin: 5}}/>
-          </div>
+          {socials.map(social => {
+            return (
+              <div>
+              <SocialIcon url="#" network={social} style={{ height: 20, width: 20, margin: 5}} />
+              </div>
+            )
+          })}
         </div>
         <div
           style={{  
