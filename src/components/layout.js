@@ -5,9 +5,8 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { useState } from "react";
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import Header from "./header"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/custom.css';
@@ -17,6 +16,32 @@ import '../fonts/Roboto-Light.ttf';
 import '../fonts/Roboto-Medium.ttf';
 import '../fonts/Roboto-Regular.ttf';
 import { SocialIcon } from "react-social-icons";
+import styled from "styled-components";
+import { socials } from "../data/socdata"
+
+
+const Footer = styled.footer`
+  box-sizing: border-box;
+  width: 100%;
+  font-size: var(--font-sm);
+  background-color: black;
+  color: white;
+  opacity: 0.9;
+  margin-top: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+`
+
+const SocBlock = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const CopyWright = styled.div`
+ margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+`
 
 
 const Layout = ({ children }) => {
@@ -28,109 +53,33 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
-
-  const socials = [
-    {
-      network: "facebook",
-      url: "https://facebook.com",
-    },
-    {
-      network: "telegram",
-      url: "https://t.me",
-    },
-    {
-      network: "instagram",
-      url: "https://instagram.com",
-    },
-    {
-      network: "twitter",
-      url: "https://twitter.com",
-    },
-    {
-      network: "linkedin",
-      url: "https://linkedin.com",
-    },
-    {
-      network: "pinterest",
-      url: "https://pinterest.com",
-    },
-    {
-      network: "github",
-      url: "https://github.com",
-    },
-    {
-      network: "gitlab",
-      url: "https://gitlab.com",
-    },
-    {
-      network: "youtube",
-      url: "https://youtube.com",
-    },
-  ]
-
-  const [isHover, setIsHover] = useState(false)
-
-  const handleMouseEnter = () => {
-    setIsHover(true)
-  }
-
-  const handleMouseLeave = () => {
-    setIsHover(false)
-  }
-
+  `)  
+  
   const socIconStyle = {
-    height: isHover ? 30 : 20,
-    width: isHover ? 30 : 20,
-    margin: 5,
-    cursor: "pointer",
+    height: 20,
+    width: 20,
+    margin: 5,    
   }
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
-      <footer
-        style={{
-          boxSizing: `border-box`,
-          width: `100%`,
-          marginTop: `var(--space-5)`,
-          fontSize: `var(--font-sm)`,
-          backgroundColor: `black`,
-          color: `white`,
-          opacity: `0.9`,
-          marginTop: `80px`,
-          paddingTop: `10px`,
-          paddingBottom: `10px`,
-        }}
-      >
-        <div
-          style={{
-            display: `flex`,
-            justifyContent: `center`,
-          }}
-        >
-          {socials.map(social => {
+      <Footer>
+        <SocBlock>
+          {socials?.map(social => {
             return (
-              <div>
+              <div key={social.id}>
                 <SocialIcon
                   url={social.url}
-                  network={social.network}
-                  style={socIconStyle}
-                  // onMouseEnter={handleMouseEnter}
-                  // onMouseLeave={handleMouseLeave}
+                  network={social.network} 
+                  style={socIconStyle}                                                  
                 />
               </div>
             )
           })}
-        </div>
-        <div
-          style={{
-            marginTop: `10px`,
-            marginLeft: `10px`,
-            marginRight: `10px`,
-          }}
-        >
+        </SocBlock>
+        <CopyWright>
           <div style={{ textAlign: `center` }}>
             © {new Date().getFullYear()} &middot; Built with
             {` `}
@@ -146,8 +95,8 @@ const Layout = ({ children }) => {
               Freepik
             </a>
           </div>
-        </div>
-      </footer>
+        </CopyWright>
+      </Footer>
     </>
   )
 }

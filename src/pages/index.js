@@ -18,7 +18,6 @@ const IndexPage = ({ data }) => {
         <h1 style={{ padding: `30px`, textAlign: `center` }}>
           Blog about travelings with Static CMS & Gatsby
         </h1>
-
         <Row className="g-4" style={{marginBottom: `50px`}} >          
           <PostsList posts={posts} />
         </Row>

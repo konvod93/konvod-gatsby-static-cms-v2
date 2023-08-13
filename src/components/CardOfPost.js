@@ -4,8 +4,20 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { AiOutlineDoubleRight } from "@react-icons/all-files/ai/AiOutlineDoubleRight";
 import { Card } from "react-bootstrap"
 import TagsList from "./TagsList";
+import styled from "styled-components";
 
-
+const Dates = styled.p`
+  font-family: "Roboto";
+  font-style: italic;
+`
+const Category = styled.p`
+  font-family: "Roboto";
+  font-weight: 500;
+`
+const CatLink = styled(Link)`
+  font-family: "Roboto";
+  font-style: italic;
+`
 
 
 const CardOfPost = ({ frontmatter, fields }) => {
@@ -21,8 +33,8 @@ const CardOfPost = ({ frontmatter, fields }) => {
             />
                 <Card.Body>
                   <Card.Title>{frontmatter.title}</Card.Title>
-                  <p style={{ fontFamily: `Roboto`, fontStyle: `italic` }}>{frontmatter.travel_dates}</p>
-                  <p style={{ fontFamily: `Roboto`, fontWeight: `500` }}>Category: <Link to={`/category/${frontmatter.category}`} style={{fontFamily: `Roboto`, fontStyle: `italic`}}>{frontmatter.category}</Link></p>
+                  <Dates>{frontmatter.travel_dates}</Dates>
+                  <Category>Category: <CatLink to={`/category/${frontmatter.category}`}>{frontmatter.category}</CatLink></Category>
                   <Link to={fields.slug}>
                     Read <AiOutlineDoubleRight />
                   </Link>

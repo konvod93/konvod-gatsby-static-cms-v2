@@ -7,6 +7,7 @@
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "@staticcms/app": "^2.5.1",
+    "babel-plugin-styled-components": "^2.1.4",
     "bootstrap": "^5.3.0",
     "gatsby": "^5.11.0",
     "gatsby-plugin-categories": "^2.3.7",
@@ -16,6 +17,7 @@
     "gatsby-plugin-react-helmet": "^6.11.0",
     "gatsby-plugin-sharp": "^5.11.0",
     "gatsby-plugin-static-cms": "^2.0.2",
+    "gatsby-plugin-styled-components": "^6.11.0",
     "gatsby-plugin-tags": "^2.3.7",
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-transformer-remark": "^6.11.0",
@@ -26,7 +28,8 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.10.1",
     "react-social-icons": "^5.15.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "prettier": "^2.8.8"
