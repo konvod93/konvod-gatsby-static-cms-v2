@@ -21,29 +21,33 @@ const CatLink = styled(Link)`
 
 
 const CardOfPost = ({ frontmatter, fields }) => {
-  
   const tags = fields.tags
-  
-      return (
-        <Card>
-                <GatsbyImage
-            image={getImage(frontmatter.featured_image)}
-            alt={frontmatter.title}
-            className="card-img-top"
-            />
-                <Card.Body>
-                  <Card.Title>{frontmatter.title}</Card.Title>
-                  <Dates>{frontmatter.travel_dates}</Dates>
-                  <Category>Category: <CatLink to={`/category/${frontmatter.category}`}>{frontmatter.category}</CatLink></Category>
-                  <Link to={fields.slug}>
-                    Read <AiOutlineDoubleRight />
-                  </Link>
-                </Card.Body>
-                <Card.Footer>                  
-                  <TagsList tags={tags} />
-                </Card.Footer>
-              </Card>
-    )
+
+  return (
+    <Card>
+      <GatsbyImage
+        image={getImage(frontmatter.featured_image)}
+        alt={frontmatter.title}
+        className="card-img-top"
+      />
+      <Card.Body>
+        <Card.Title>{frontmatter.title}</Card.Title>
+        <Dates>{frontmatter.travel_dates}</Dates>
+        <Category>
+          Category:{" "}
+          <CatLink to={`/category/${frontmatter.category}`}>
+            {frontmatter.category}
+          </CatLink>
+        </Category>
+        <Link to={fields.slug}>
+          Read <AiOutlineDoubleRight />
+        </Link>
+      </Card.Body>
+      <Card.Footer>
+        <TagsList tags={tags} />
+      </Card.Footer>
+    </Card>
+  )
 }
 
 export default CardOfPost
